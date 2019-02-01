@@ -9,5 +9,5 @@
 add_library(windows-mkpasswd-lib STATIC include/windows-mkpasswd/windows-mkpasswd.hpp source/windows-mkpasswd.cpp)
 set_target_properties(windows-mkpasswd-lib PROPERTIES OUTPUT_NAME windows-mkpasswd)
 target_include_directories(windows-mkpasswd-lib PUBLIC include)
-install(TARGETS windows-mkpasswd-lib DESTINATION $<CONFIG>/lib)
-install(DIRECTORY include DESTINATION $<CONFIG>)
+install(TARGETS windows-mkpasswd-lib DESTINATION lib)
+install(DIRECTORY include/ DESTINATION include)

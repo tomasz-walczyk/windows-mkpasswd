@@ -7,7 +7,7 @@
 ###########################################################
 
 cmake_minimum_required(VERSION 3.12)
-project(windows-mkpasswd VERSION 0.0.1.0)
+project(windows-mkpasswd VERSION 0.0.1)
 
 if (NOT WIN32)
   message(FATAL_ERROR "Windows is required to compile this project!")
@@ -20,3 +20,13 @@ set(CMAKE_CXX_STANDARD 14)
 add_subdirectory(lib)
 add_subdirectory(bin)
 add_subdirectory(test)
+
+set(CPACK_PACKAGE_VENDOR "Tomasz Walczyk")
+set(CPACK_PACKAGE_DESCRIPTION_SUMMARY "Very simple implementation of mkpasswd for Windows.")
+set(CPACK_PACKAGE_VERSION_MAJOR ${PROJECT_VERSION_MAJOR})
+set(CPACK_PACKAGE_VERSION_MINOR ${PROJECT_VERSION_MINOR})
+set(CPACK_PACKAGE_VERSION_PATCH ${PROJECT_VERSION_PATCH})
+set(CPACK_RESOURCE_FILE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
+set(CPACK_RESOURCE_FILE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
+set(CPACK_GENERATOR "ZIP")
+include(CPack)
