@@ -1,6 +1,6 @@
 Very simple implementation of mkpasswd for Windows.
 ___
-Application encrypts passwords using random salt and SHA512 algorithm, passwords are read from stdin and writes in encrypted form to stdout.
+Application encrypts passwords using random salt and SHA512 algorithm, passwords are read from stdin and written in encrypted form to stdout.
 You need to install [Microsoft Visual C++ Redistributable for Visual Studio 2015 ](https://www.microsoft.com/pl-pl/download/details.aspx?id=48145)
 first if you want to use a prebuilt application.
 ___
