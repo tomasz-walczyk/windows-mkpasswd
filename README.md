@@ -6,7 +6,7 @@ ___
 **You may need to start PowerShell console as an administrator if your installation/packaging directory requires administrator privileges for writing.**
 ```powershell
 git clone https://github.com/tomasz-walczyk/windows-mkpasswd.git
-Set-Location (New-Item windows-mkpasswd-win/build -ItemType Directory)
+Set-Location (New-Item windows-mkpasswd/build -ItemType Directory)
 cmake -G "Visual Studio 15 2017 Win64" ..
 cmake --build . --config Release --target Package
 ```
