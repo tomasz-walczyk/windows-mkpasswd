@@ -21,6 +21,8 @@ ExternalProject_Add(GoogleTest
     -DINSTALL_GTEST:BOOL=ON
     -Dgtest_force_shared_crt:BOOL=ON
     -DCMAKE_INSTALL_PREFIX:PATH=<INSTALL_DIR>/$<CONFIG>
+    -DCMAKE_USER_MAKE_RULES_OVERRIDE:PATH=${CMAKE_SOURCE_DIR}/cmake/c_flag_overrides.cmake
+    -DCMAKE_USER_MAKE_RULES_OVERRIDE_CXX:PATH=${CMAKE_SOURCE_DIR}/cmake/cxx_flag_overrides.cmake
 )
 
 set(GOOGLE_TEST_INCLUDE_DIRECTORIES ${GOOGLE_TEST_INSTALL_DIR}/$<CONFIG>/include)
